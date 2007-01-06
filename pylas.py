@@ -27,21 +27,6 @@
 
  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-
- To do:
-   - Add a psuedo-random reader that doesn't thrash the disk as much and reads more sequentially
-       (perhaps pre-generate list of random records and sort them?)
-   - support multiple OGR output formats
-   - Port to C++ for a speed boost and possibly an OGR driver?
-   - Better method to determine optimal number of pts based on extents and eventual output DEM resolution
-
- Notes:
-   Basic steps to convert the shp to a raster DEM with GRASS:
-      v.in.ogr -o dsn=lidar.shp layer=lidar output=lidar
-      g.region vect=lidar
-      g.region res=10
-      v.surf.rst input=lidar elev=lidar_dem zcolumn=elev
-
   Changelog:
    12/18/06. Carl Anderson's updates once again
     - added getopt support and refactored parameter input.
