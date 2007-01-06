@@ -337,7 +337,7 @@ def createTxt(outfile, h, numpts=None, rand=True, dim=3, sample=1):
     fh.close()
 
 def usage ():
-    print "pylas.py  version 0.03 "
+    print "pylas.py  version 0.1 "
     print "\npylas comes with ABSOLUTELY NO WARRANTY.  This is free software, and you are free to use and modify it for any purpose.\n"
     print "OGR bindings from the GDAL/OGR library required for Shapefile support.\n"
     print "Usage: "
